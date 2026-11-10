@@ -31,13 +31,16 @@ class SimpleConvertTest {
         String[] array = simpleConvert.toArray("dog", "cate", "crocodile", "rebut", "wolf", "bird");
         assertThat(simpleConvert.toSet(array)).containsAnyOf("rebut").element(3).isNotNull();
     }
+
 @Test
     void checkList() {
         SimpleConvert simpleConvert = new SimpleConvert();
         String[] array = simpleConvert.toArray("dog", "cate", "crocodile", "rebut", "wolf", "bird");
         assertThat(simpleConvert.toList(array)).element(2).isNotEqualTo("bear");
         assertThat(simpleConvert.toList(array)).doesNotContain("fox");
-    }@Test
+    }
+
+    @Test
     void checkMap() {
         SimpleConvert simpleConvert = new SimpleConvert();
         String[] array = simpleConvert.toArray("dog", "cate", "crocodile", "rebut", "wolf", "bird");

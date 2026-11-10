@@ -24,22 +24,19 @@ public class AttachmentSort {
         // Здесь создайте компаратор на основании анонимного класса.
         System.out.println();
 
-
         Comparator<Attachment> comparator2 = new Comparator<Attachment>() {
             @Override
             public int compare(Attachment o1, Attachment o2) {
 
-                System.out.println(o1.getName()+" "+o2.getName());
+                System.out.println(o1.getName() + " " + o2.getName());
                 System.out.println(o1.getName().compareTo(o2.getName()));
                 return o1.getName().compareTo(o2.getName());
             }
 
         };
 
-
         attachments.sort(comparator2);
     }
-
 
 }
 

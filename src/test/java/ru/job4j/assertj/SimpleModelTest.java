@@ -10,12 +10,14 @@ class SimpleModelTest {
         assertThatThrownBy(simpleModel::getName)
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
     @Test
     void  checkName() {
         SimpleModel simpleModel = new SimpleModel();
         assertThatThrownBy(() -> simpleModel.setName("name", 5))
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
     @Test
     void  checkMessage() {
         SimpleModel simpleModel = new SimpleModel();
@@ -28,6 +30,7 @@ class SimpleModelTest {
                 .message()
                 .isNotEmpty();
     }
+
     @Test
     void  checkWordMessage() {
         SimpleModel simpleModel = new SimpleModel();
