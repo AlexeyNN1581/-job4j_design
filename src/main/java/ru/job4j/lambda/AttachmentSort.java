@@ -8,8 +8,8 @@ public class AttachmentSort {
     public static void main(String[] args) {
         List<Attachment> attachments = Arrays.asList(
                 new Attachment("image 1", 100),
-                new Attachment("image 2", 34),
-                new Attachment("image 3", 13)
+                new Attachment("image 1", 34),
+                new Attachment("image 2", 13)
         );
         Comparator<Attachment> comparator = new Comparator<>() {
             @Override
@@ -28,22 +28,11 @@ public class AttachmentSort {
         Comparator<Attachment> comparator2 = new Comparator<Attachment>() {
             @Override
             public int compare(Attachment o1, Attachment o2) {
-                int resultSize;
-                if (o1.getSize() < o2.getSize()) {
-                    resultSize=o2.getSize()- o1.getSize();
-                    System.out.println("Размер " + o1.getName() + " меньше размера " + o2.getName() + " на: "+resultSize );
-                    return o2.getSize() - o1.getSize();
-                } else if (o1.getSize() > o2.getSize()) {
-                    resultSize=o1.getSize()- o2.getSize();
-                    System.out.println("Размер " + o1.getName() + " больше размера " + o2.getName() + " на:"+resultSize);
-                    return resultSize;
 
-                } else{
-                    System.out.println("Размер " + o1.getName() + " равен размеру " + o2.getName() + " и равен:");
-                return o1.getSize();
-
+                System.out.println(o1.getName()+" "+o2.getName());
+                System.out.println(o1.getName().compareTo(o2.getName()));
+                return o1.getName().compareTo(o2.getName());
             }
-}
 
         };
 
