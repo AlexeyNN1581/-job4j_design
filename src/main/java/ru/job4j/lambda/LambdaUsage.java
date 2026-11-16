@@ -7,11 +7,11 @@ import java.util.List;
 public class LambdaUsage {
 
     public static void main(String[] args) {
-        List<String> strings = Arrays.asList("eeeee", "a",  "ccc", "dddd", "bb");
+        List<String> strings = Arrays.asList("eeeee", "a", "ccc", "dddd", "bb");
         Comparator<String> comparator = (left, right) -> {
 
-            System.out.println("compare- " + right + " " + "(" + right.length() + ")" + " " + left + " " + "(" + left.length() +  ")");
-        return     Integer.compare(right.length(), left.length());
+            System.out.printf("compare: length right %d,length left %d\n", right.length(), left.length());
+            return Integer.compare(right.length(), left.length());
 
         };
         strings.sort(comparator);
